@@ -1,0 +1,11 @@
+Thous = ["", "M","MM","MMM"]
+hunds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+tens = ["", "X", "XX", "XXX", "XL","L", "LX", "LXX", "LXXX", "XC"]
+ones = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+def checkio(data):				#Example Number: 345
+	th = Thous[data//1000]		#th = Thous[0] = “”
+	h= hunds [ data// 100 % 10]		#h = hunds[3 % 10] = hunds[3] = “CCC”
+	T= tens[data// 10%10]			#T = tens[34 % 10] = tens[4] = “XL”
+	O = ones[data % 10]			#O = ones[5] = “V”
+	#replace this for solution
+	return th + h + T + O			#return CCCXLV
